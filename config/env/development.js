@@ -17,8 +17,18 @@ module.exports = {
    * environment (see config/connections.js and config/models.js )           *
    ***************************************************************************/
 
-  // models: {
-  //   connection: 'someMongodbServer'
-  // }
+   port: process.env.PORT || 8800,
+
+   models: {
+     migrate: 'safe'
+     //connection: 'someMongodbServer'
+   },
+  autoreload: {
+    active: true,
+    dirs: [
+      "api/**/*",
+    ]
+  }
+
 
 };

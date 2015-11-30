@@ -20,10 +20,10 @@
 module.exports.policies = {
   '*': ['sessionAuth'], // Everything resctricted here
   'UsersController': {
-    'create': true // We dont need authorization here, allowing public access
+    'create': true
   },
 
   'AuthController': {
-    '*': true // We dont need authorization here, allowing public access
+    '*': true
   }
 };

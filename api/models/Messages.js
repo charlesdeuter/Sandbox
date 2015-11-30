@@ -8,6 +8,19 @@
 module.exports = {
 
   attributes: {
+    author: {
+      model : 'Users'
+    },
+    body : {
+      type: 'string',
+      required: true
+    },
+    comments:{
+      collection: 'Comments',
+      via: 'message'
+    }
+
+
 
   }
 };

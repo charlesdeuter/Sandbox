@@ -1,7 +1,7 @@
 /**
- * CommentsController
+ * PostsController
  *
- * @description :: Server-side logic for managing comments
+ * @description :: Server-side logic for managing posts
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
@@ -13,7 +13,7 @@ module.exports = {
     message = req.allParams();
     message.author = req.user;
 
-    Comments.create(message).exec(function (err, message) {
+    Messages.create(message).exec(function (err, message) {
       if (err) {
         return res.json(err.status, {err: err});
       }

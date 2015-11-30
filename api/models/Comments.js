@@ -8,7 +8,17 @@
 module.exports = {
 
   attributes: {
-
+    author: {
+      model : 'Users'
+    },
+    body : {
+      type : 'string',
+      required : true
+    },
+    message : {
+      model: 'Messages',
+      required: true
+    }
   }
 };
 

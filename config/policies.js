@@ -25,5 +25,8 @@ module.exports.policies = {
 
   'AuthController': {
     '*': true
+  },
+  'TransactionsController': {
+    '*': true
   }
 };
